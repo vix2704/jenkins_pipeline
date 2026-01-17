@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                credentialsId: '2582e26d-2cf0-448e-a202-23a7101899b8',
+                credentialsId: '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',
                 url: 'https://github.com/vix2704/demo_petclinic.git'
             }
         }
