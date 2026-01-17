@@ -19,7 +19,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv(credentialsId:'sonarsid', installationName:'sonarserver') {
+                withSonarQubeEnv(credentialsId:'sonarcred', installationName:'sonarserver') {
                     sh 'mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar'
                 }
             }
